@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Subtitle Translator</title>
+    <meta name="description" content="AI-powered English-to-Persian SRT subtitle translation workspace with smart translation memory, specialized terminology, and side-by-side editor." />
+    <meta property="og:title" content="Gabriel Subtitle Translator" />
+    <meta property="og:description" content="AI-powered English-to-Persian SRT subtitle translation workspace with smart translation memory, specialized terminology, and side-by-side editor." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('pst_theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+
+          var savedFont = localStorage.getItem('pst_persian_font') || 'vazir';
+          document.documentElement.setAttribute('data-persian-font', savedFont);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#F6F8FA] dark:bg-[#0B0F17] text-[#0F172A] dark:text-[#F1F5F9] antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

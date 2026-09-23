@@ -1,0 +1,6 @@
+{
+  "name": "Gabriel Subtitle Translator",
+  "description": "AI-powered English-to-Persian SRT subtitle translation workspace with smart translation memory, specialized terminology, and side-by-side editor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

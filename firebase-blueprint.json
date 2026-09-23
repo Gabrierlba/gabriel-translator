@@ -1,0 +1,31 @@
+{
+  "entities": {
+    "TerminologyProfile": {
+      "title": "TerminologyProfile",
+      "description": "Custom and default terminology profiles containing technical terms and their Persian translations",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier of the profile" },
+        "name": { "type": "string", "description": "English name of the profile" },
+        "persianName": { "type": "string", "description": "Persian display name of the profile" },
+        "items": {
+          "type": "array",
+          "description": "List of terminology items in the profile",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "english": { "type": "string" },
+              "persian": { "type": "string" },
+              "category": { "type": "string" }
+            },
+            "required": ["id", "english", "persian"]
+          }
+        },
+        "updatedAt": { "type": "string", "description": "Timestamp of last modification" }
+      },
+      "required": ["id", "name", "persianName", "items"]
+    }
+  },
+  "firestoreRulesSummary": "Allow public read and write to terminology_profiles so terms added by users persist across all links and browser sessions without requiring manual sign-in."
+}
